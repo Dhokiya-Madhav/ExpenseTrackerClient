@@ -9,9 +9,11 @@ export default function Expenses() {
                     <div className='col'>
                         <h5>Filters</h5>
                         <form>
-                            <input type="text" class="form-control" placeholder='Search' />
+                            <input type="text" className="form-control" placeholder='Search' />
                             <br></br>
-                            <input type="date" class="form-control" id="exampleFormControlInput1" />
+                            <input type="date" className="form-control" id="exampleFormControlInput1" />
+                            <br></br>
+                            <input type="month" className="form-control" min="2018-01" placeholder='Month' />
                             <br></br>
                             <button className='btn btn-outline-success'>Apply</button>
                             &nbsp;&nbsp;&nbsp;

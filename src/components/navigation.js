@@ -17,13 +17,13 @@ export default function Navigation() {
                                 <a className="nav-link text-white" aria-current="page" href="#">Expense Recorder</a>
                             </li>
                             <li className="nav-item">
-                                <Link to="/expense" className="nav-link text-white">Home</Link>
+                                <Link to="/" className="nav-link text-white">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">Set Monthly Budget</a>
+                                <Link to="/" className="nav-link text-white">History</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white">Contact Us</a>
+                                
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
