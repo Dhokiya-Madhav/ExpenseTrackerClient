@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/navigation';
 import Login from './components/login';
+import Signup from './components/signup';
+import Expenses from './components/expense';
 import {
   BrowserRouter,
   Routes,
@@ -13,7 +15,9 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
+          <Route path="/" element={<Expenses/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
         </Routes>
       </BrowserRouter>
 

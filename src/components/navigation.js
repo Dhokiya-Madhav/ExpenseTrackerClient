@@ -14,10 +14,13 @@ export default function Navigation() {
                         <img src={Logo} height={55} width={55} />
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link text-white active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link text-white" aria-current="page" href="#">Expense Recorder</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">About Us</a>
+                                <Link to="/expense" className="nav-link text-white">Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="#">Set Monthly Budget</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-white">Contact Us</a>
@@ -25,7 +28,8 @@ export default function Navigation() {
                         </ul>
                         <form className="d-flex" role="search">
                             <button className='btn btn-outline-danger'><Link to="/login" className='nav-link'>Login</Link></button>
-
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button className='btn btn-outline-danger'><Link to="/signup" className='nav-link'>Sign up</Link></button>
                         </form>
                     </div>
                 </div>
