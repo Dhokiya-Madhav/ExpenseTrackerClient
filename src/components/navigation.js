@@ -20,7 +20,7 @@ export default function Navigation() {
                                 <Link to="/" className="nav-link text-white">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link text-white">History</Link>
+                                <Link to="/addExp" className="nav-link text-white">Add New Expense</Link>
                             </li>
                             <li className="nav-item">
                                 

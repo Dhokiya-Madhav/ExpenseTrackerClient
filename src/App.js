@@ -4,6 +4,7 @@ import Navigation from './components/navigation';
 import Login from './components/login';
 import Signup from './components/signup';
 import Expenses from './components/expense';
+import AddExpense from './components/addExpense';
 import {
   BrowserRouter,
   Routes,
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Expenses/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/addExp" element={<AddExpense/>}></Route>
         </Routes>
       </BrowserRouter>
 
