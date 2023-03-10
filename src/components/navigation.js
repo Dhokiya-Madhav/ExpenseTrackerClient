@@ -22,6 +22,10 @@ export default function Navigation() {
                             <li className="nav-item">
                                 <Link to="/addExp" className="nav-link text-white">Add New Expense</Link>
                             </li>
+
+                            <li className="nav-item">
+                                <Link to="/budget" className="nav-link text-white">Set Monthly Budget</Link>
+                            </li>
                             <li className="nav-item">
                                 
                             </li>

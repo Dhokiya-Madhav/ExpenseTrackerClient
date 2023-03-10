@@ -5,6 +5,7 @@ import Login from './components/login';
 import Signup from './components/signup';
 import Expenses from './components/expense';
 import AddExpense from './components/addExpense';
+import Budget from './components/setBudget';
 import {
   BrowserRouter,
   Routes,
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/addExp" element={<AddExpense/>}></Route>
+          <Route path="/budget" element={<Budget/>}></Route>
         </Routes>
       </BrowserRouter>
 

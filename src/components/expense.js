@@ -1,7 +1,14 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
 
 export default function Expenses() {
-
+    const [expense,setNewExpense] = useState([])
+    useEffect(() => {
+        fetch("https://localhost:44329/exp/Expenses").then((response) => response.json())
+            .then((data) => {
+                setNewExpense(data);
+                console.log(data);
+            })
+    },[]);
     return (
         <>
             <div className="container text-center">
@@ -26,7 +33,7 @@ export default function Expenses() {
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="panelsStayOpen-headingOne">
                                     <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                        Accordion Item #1
+                                        Expense 1
                                     </button>
                                 </h2>
                                 <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
