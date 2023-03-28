@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useRouteMatch } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Logo from '../images/logo.png'
 export default function Navigation() {
 
+    const userName = localStorage.getItem("userName");
+
+    const logoutUser = () => {
+        localStorage.clear();
+        window.location = "http://localhost:3000/";
+    };
+    if (userName) {
+        var buttons = <form className="d-flex" role="search">
+            {userName}
+            <button className='btn btn-outline-danger' onClick={logoutUser}>Logout</button>
+        </form>;
+
+        var greet = <center>Welcome , {userName}</center>;
+    }
+    else
+    {
+        var buttons = <form className="d-flex" role="search">
+        <button className='btn btn-outline-danger'><Link to="/login" className='nav-link'>Login</Link></button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button className='btn btn-outline-danger'><Link to="/signup" className='nav-link'>Sign up</Link></button>
+    </form>;   
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-dark">
@@ -27,17 +50,23 @@ export default function Navigation() {
                                 <Link to="/budget" className="nav-link text-white">Set Monthly Budget</Link>
                             </li>
                             <li className="nav-item">
-                                
+
                             </li>
                         </ul>
+
+                        {buttons}
+                        {/* 
                         <form className="d-flex" role="search">
                             <button className='btn btn-outline-danger'><Link to="/login" className='nav-link'>Login</Link></button>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <button className='btn btn-outline-danger'><Link to="/signup" className='nav-link'>Sign up</Link></button>
                         </form>
+                        */}
                     </div>
                 </div>
             </nav>
+            <br></br>
+            {greet}
             <br></br>
         </>
     )

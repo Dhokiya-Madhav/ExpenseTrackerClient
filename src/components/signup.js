@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 
-export default class Signup extends Component {
 
+export default class Signup extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
             userName: "",
             password: "",
             email: "",
-            mb : "",
+            mb: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -17,7 +18,7 @@ export default class Signup extends Component {
         e.preventDefault();
         const { userName,password,email,mb } = this.state;
         console.log(userName, email, password,mb);
-        fetch("http://localhost:44329/user/Users", {
+        fetch("https://localhost:44329/user/Users", {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -30,11 +31,25 @@ export default class Signup extends Component {
                 password,
                 email,
                 mb,
-            }),
+            }), 
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data, "userRegister");
+                console.log(data.status);
+                if(data.status === 400)
+                {
+                    alert("User Already Exists")
+                }
+                else if(data.status === 500)
+                {
+                    console.log("Signup successfull");
+                    window.location = "http://localhost:3000/login";   
+                }
+                else
+                {
+                    console.log("Signup successfull");
+                    window.location = "http://localhost:3000/login";   
+                }
             });
     }
     render() {

@@ -2,8 +2,9 @@ import React,{ useEffect, useState } from 'react'
 
 export default function Expenses() {
     const [expense,setNewExpense] = useState([])
+    
     useEffect(() => {
-        fetch("https://localhost:44329/exp/Expenses").then((response) => response.json())
+        fetch("https://localhost:44329/getExpense/"+localStorage.getItem("userId")).then((response) => response.json())
             .then((data) => {
                 setNewExpense(data);
                 console.log(data);

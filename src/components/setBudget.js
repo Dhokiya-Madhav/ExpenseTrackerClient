@@ -1,6 +1,13 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 
 export default function Budget() {
+
+    useEffect(() => {
+        if(!localStorage.getItem("userId"))
+        {
+            window.location =  "http://localhost:3000/Login";
+        }
+    },[])
 
     return (
         <>
