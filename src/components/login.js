@@ -43,9 +43,11 @@ export default class Login extends Component {
                     localStorage.setItem("userId",data.id)
                     localStorage.setItem("userName",data.userName)
                     localStorage.setItem("userEmail",data.email)
+                    localStorage.setItem("userPsw",data.password)
                     console.log(localStorage.getItem("userId"));
                     console.log(localStorage.getItem("userName"));
                     console.log(localStorage.getItem("userEmail"));
+                    
                     window.location = "http://localhost:3000/";
                 }
             });
