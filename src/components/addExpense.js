@@ -78,12 +78,13 @@ export default class AddExpense extends Component {
                                         <option value="Electronics">Electronics</option>
                                         <option value="Vegetable">Vegetable</option>
                                         <option value="Clothes">Clothes</option>
+                                        <option value="Investment">Investment</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <br></br>
                                 <div className="form-floating">
-                                    <input type="text" onChange={(e) => this.setState({ Description: e.target.value })} className="form-control" id="floatingPassword" placeholder="Password" />
+                                    <input type="text" autoComplete='false' onChange={(e) => this.setState({ Description: e.target.value })} className="form-control" id="floatingPassword" placeholder="Password" />
                                     <label for="floatingPassword">Description</label>
                                 </div>
                                 <br></br>
