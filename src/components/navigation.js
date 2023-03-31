@@ -47,7 +47,7 @@ export default function Navigation() {
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/budget" className="nav-link text-white">Set Monthly Budget</Link>
+                                
                             </li>
                             <li className="nav-item">
 

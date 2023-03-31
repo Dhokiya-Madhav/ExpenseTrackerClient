@@ -9,7 +9,6 @@ export default function Expenses() {
             .then((data) => {
                 setNewExpense(data);
                 console.log(data);
-
             })
     }, []);
 
