@@ -12,7 +12,8 @@ export default function Navigation() {
     };
     if (userName) {
         var buttons = <form className="d-flex" role="search">
-            {userName}
+            <Link to="/myProfile"><button className='btn btn-outline-warning'>My Profile</button></Link>
+            &nbsp;&nbsp;
             <button className='btn btn-outline-danger' onClick={logoutUser}>Logout</button>
         </form>;
 
