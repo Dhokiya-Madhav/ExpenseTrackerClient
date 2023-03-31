@@ -8,6 +8,7 @@ import AddExpense from './components/addExpense';
 import Budget from './components/setBudget';
 import UpdateExpense from './components/updateExpense';
 import MyProfile from './components/myProfile';
+import MonthWise from './components/monthWise';
 import {
   BrowserRouter,
   Routes,
@@ -26,6 +27,7 @@ function App() {
           <Route path="/budget" element={<Budget/>}></Route>
           <Route path="/updateExp" element={<UpdateExpense/>}></Route>
           <Route path="/myProfile" element={<MyProfile/>}></Route>
+          <Route path="/monthWise" element={<MonthWise/>}></Route>
         </Routes>
       </BrowserRouter>
 

@@ -48,10 +48,7 @@ export default function Navigation() {
                             </li>
 
                             <li className="nav-item">
-                                
-                            </li>
-                            <li className="nav-item">
-
+                            <Link to="/monthWise" className="nav-link text-white">Month Wise Expense</Link>
                             </li>
                         </ul>
 
