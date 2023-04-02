@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useRouteMatch } from 'react-router-dom';
+import { redirect, useRouteMatch } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Logo from '../images/logo.png'
 export default function Navigation() {
@@ -8,7 +8,7 @@ export default function Navigation() {
 
     const logoutUser = () => {
         localStorage.clear();
-        window.location = "http://localhost:3000/";
+        redirect("http://localhost:3000/login");
     };
     if (userName) {
         var buttons = <form className="d-flex" role="search">

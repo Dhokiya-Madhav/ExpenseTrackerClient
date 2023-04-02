@@ -4,6 +4,13 @@ export default function MonthWise() {
     const [monthWiseData, setMonthWiseData] = useState({})
     const [ttl,setTTL] = useState(0);
     
+    useEffect(() => {
+        if(localStorage.getItem("userId") == undefined)
+        {
+            window.location = "http://localhost:3000/login";
+        }
+    }, []);
+
     var total = 0;
     const handleMonth = () => {
         fetch("https://localhost:44329/exp/Expenses/userId/" + localStorage.getItem("userId")).then((response) => response.json())

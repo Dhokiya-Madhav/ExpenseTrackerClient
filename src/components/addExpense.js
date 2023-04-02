@@ -14,6 +14,11 @@ export default class AddExpense extends Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleCategory = this.handleCategory.bind(this);
+
+        if(localStorage.getItem('userId') == undefined)
+        {
+            window.location = "http://localhost:3000/login";
+        }
     }
 
     handleCategory(e){

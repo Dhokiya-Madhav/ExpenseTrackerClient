@@ -7,8 +7,11 @@ export default function Expenses() {
     useEffect(() => {
         fetch("https://localhost:44329/exp/Expenses/userId/" + localStorage.getItem("userId")).then((response) => response.json())
             .then((data) => {
-                setNewExpense(data);
-                console.log(data);
+                if(data.length > 0)
+                {
+                    setNewExpense(data);
+                    console.log(data);
+                }
             })
     }, []);
 
